@@ -1,0 +1,150 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      3841,        108]*)
+(*NotebookOutlinePosition[      4478,        130]*)
+(*  CellTagsIndexPosition[      4434,        126]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(\( (*Prints\ out\ a\ series*) \)\(\[IndentingNewLine]\)\(\(j = 
+        6;\)\[IndentingNewLine]
+    While[
+      j > 1, \[IndentingNewLine]Print[j]; \[IndentingNewLine]If[EvenQ[j], 
+        j = j/2, j = 3  j + 1]\[IndentingNewLine]]\n
+    Print[j]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\( (*Gives\ a\ length\ for\ a\ series*) \)\(\[IndentingNewLine]\)\(j \
+= 10; k = 1;\n
+    While[
+      j > 1, \[IndentingNewLine]If[EvenQ[j], j = j/2, 
+        j = 3  j + 1]; \[IndentingNewLine]\(k++\)\[IndentingNewLine]]\n
+    Print[k]\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(l = 1;\)\), "\[IndentingNewLine]", 
+    \(\(m = 1;\)\), "\[IndentingNewLine]", 
+    \(\(SODS = 1;\)\), "\[IndentingNewLine]", 
+    \(\(LengthODaShit = 1000000;\)\), "\[IndentingNewLine]", 
+    \(\(LODS = LengthODaShit;\)\), "\[IndentingNewLine]", 
+    \(\(o = Table[0, {Kicker, LODS}];\)\), "\[IndentingNewLine]", 
+    \(\(p = Table[0, {Inthenuts, LODS}];\)\), "\[IndentingNewLine]", 
+    \(\(o[\([1]\)] = 1;\)\), "\[IndentingNewLine]", 
+    \(For[i = SODS, 
+      i \[LessEqual] LODS, \(i++\), \[IndentingNewLine]j = 
+        i; \[IndentingNewLine]k = 1; \[IndentingNewLine]While[
+        j > LODS || o[\([j]\)] \[Equal] 0, \[IndentingNewLine]p[\([k]\)] = 
+          j; \[IndentingNewLine]If[EvenQ[j], j = j/2, 
+          j = 3  j + 
+              1]; \[IndentingNewLine]\(k++\)\[IndentingNewLine]]; \
+\[IndentingNewLine]For[q = 1, 
+        q < k && q < LODS, \(q++\), \[IndentingNewLine]If[
+          p[\([q]\)] < 
+            LODS, \[IndentingNewLine]\(o[\([\ p[\([q]\)]\ ]\)] = 
+              k - q + o[\([j]\)];\)\[IndentingNewLine]]\[IndentingNewLine]]; \
+\[IndentingNewLine]k = k + o[\([j]\)] - 1; \[IndentingNewLine]If[k > l, 
+        l = k; m = 
+          i\[IndentingNewLine]]\[IndentingNewLine]]\), "\[IndentingNewLine]", \
+
+    \(m\), "\[IndentingNewLine]", 
+    \(l\), "\[IndentingNewLine]", 
+    \(o[\([m]\)]\)}], "Input"],
+
+Cell[BoxData[
+    \(837799\)], "Output"],
+
+Cell[BoxData[
+    \(525\)], "Output"],
+
+Cell[BoxData[
+    \(525\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Macintosh",
+ScreenRectangle->{{4, 1024}, {0, 746}},
+WindowSize->{520, 624},
+WindowMargins->{{Automatic, 122}, {Automatic, 0}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 286, 6, 123, "Input"],
+Cell[2043, 59, 275, 6, 123, "Input"],
+
+Cell[CellGroupData[{
+Cell[2343, 69, 1359, 27, 459, "Input"],
+Cell[3705, 98, 40, 1, 27, "Output"],
+Cell[3748, 101, 37, 1, 27, "Output"],
+Cell[3788, 104, 37, 1, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

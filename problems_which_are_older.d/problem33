@@ -1,0 +1,38 @@
+
+def two_digits(i):
+ return [(i - i%10)/10, i%10]
+
+for i in range(11,99):
+ if i%10==0:
+  continue
+ for j in range(11,i):
+  if j%10==0:
+   continue
+  di = two_digits(i)
+  dj = two_digits(j)
+  if dj[0] == di[1]:
+   if dj[1]*1.0/di[0] == j*1.0/i:
+    i,j
+  if dj[1] == di[0]:
+   if dj[0]*1.0/di[1] == j*1.0/i:
+    i,j
+
+--------
+
+def two_digits(i):
+ return [(i - i%10)/10, i%10]
+
+for i in range(11,99):
+ if i%10==0:
+  continue # I don't think this does what I think it does
+ for j in range(i+1,99):
+  if j%10==0:
+   continue
+  di = two_digits(i)
+  dj = two_digits(j)
+  if di[0] == dj[1]:
+   if di[1]*1.0/dj[0] == i*1.0/j:
+    i,j
+  if di[1] == dj[0]:
+   if di[0]*1.0/dj[1] == i*1.0/j:
+    i,j

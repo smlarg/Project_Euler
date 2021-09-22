@@ -1,0 +1,45 @@
+def is_palendrome_list(l):
+ for i in range(len(l)/2):
+  if l[i] != l[len(l)-1-i]:
+   return False
+ return True
+ 
+x = 0
+for i in range(1,999999,2): 
+ if is_palendrome_list(list(str(i))) and is_palendrome_list(list(bin(i))[2:]):
+  x = x + i
+
+print x
+
+#########
+
+x = 0
+for i in range(1000000):
+ a = list(str(i))
+ c = a[:]
+ b = list(bin(i))[2:]
+ d = b[:]
+ a.reverse()
+ b.reverse()
+ if c==a and d==b:
+  x = x + i
+
+print x
+
+
+########
+
+x = 0
+for i in range(1000000):
+ if list(str(i))==list(str(i)).reverse()[:] and list(bin(i))[2:]==list(bin(i))[2:].reverse()[:]:
+  x = x + i
+
+
+#######
+
+number = (int(num) for num in range(1,999999,2) if str(num) == str(num)[::-1] and bin(num)[2:] == bin(num)[2:][::-1])
+print sum(number)
+
+
+number = (int(num) for num in range(10**6) if str(num) == str(num)[::-1] and bin(num)[2:] == bin(num)[2:][::-1])
+print sum(number)

@@ -1,0 +1,203 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      6307,        155]*)
+(*NotebookOutlinePosition[      6944,        177]*)
+(*  CellTagsIndexPosition[      6900,        173]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(a = ReadList["\<problem18.txt\>", String];\)\)], "Input"],
+
+Cell[BoxData[
+    \(For[i = 1, 
+      i \[LessEqual] Length[a], \(i++\), \[IndentingNewLine]a[\([i]\)] = 
+        ReadList[StringToStream[a[\([i]\)]], 
+          Word]\[IndentingNewLine]]\)], "Input"],
+
+Cell[BoxData[
+    \(For[i = 1, 
+      i \[LessEqual] Length[a], \(i++\), \[IndentingNewLine]For[j = 1, 
+        j \[LessEqual] 
+          Length[a[\([i]\)]], \(j++\), \[IndentingNewLine]a[\([i, j]\)] = 
+          ToExpression[
+            a[\([i, j]\)]]\[IndentingNewLine]]\[IndentingNewLine]]\)], "Input"],
+
+Cell[BoxData[
+    \(\(b = a;\)\)], "Input"],
+
+Cell[BoxData[
+    \(For[i = Length[a] - 1, 
+      i \[GreaterEqual] 1, \(i--\), \[IndentingNewLine]For[j = 1, 
+        j \[LessEqual] Length[a[\([i]\)]], \(j++\), \[IndentingNewLine]If[
+          a[\([i + 1, j]\)] > 
+            a[\([i + 1, j + 1]\)], \[IndentingNewLine]a[\([i, j]\)] += 
+            a[\([i + 1, j]\)], \[IndentingNewLine]a[\([i, j]\)] += 
+            a[\([i + 1, 
+                j + 1]\)]\[IndentingNewLine]]\[IndentingNewLine]]\
+\[IndentingNewLine]]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(a // MatrixForm\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+            {\({1074}\)},
+            {\({995, 999}\)},
+            {\({818, 900, 935}\)},
+            {\({704, 801, 853, 792}\)},
+            {\({686, 640, 766, 731, 782}\)},
+            {\({666, 614, 636, 684, 660, 717}\)},
+            {\({647, 501, 613, 609, 533, 657, 683}\)},
+            {\({559, 499, 479, 536, 514, 526, 594, 616}\)},
+            {\({460, 434, 419, 475, 508, 470, 510, 524, 487}\)},
+            {\({419, 365, 393, 387, 419, 425, 430, 376, 454, 322}\)},
+            {\({378, 317, 231, 321, 354, 372, 393, 354, 360, 293, 247}\)},
+            {\({325, 246, 187, 178, 256, 329, 273, 302, 263, 242, 193, 
+                233}\)},
+            {\({255, 235, 154, 150, 140, 179, 256, 209, 224, 172, 174, 176, 
+                148}\)},
+            {\({125, 164, 102, 95, 112, 123, 165, 128, 166, 109, 122, 147, 
+                100, 54}\)},
+            {\({4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23}\)}
+            }], "\[NoBreak]", ")"}],
+      MatrixForm[ {{1074}, {995, 999}, {818, 900, 935}, {704, 801, 853, 
+        792}, {686, 640, 766, 731, 782}, {666, 614, 636, 684, 660, 717}, {647,
+         501, 613, 609, 533, 657, 683}, {559, 499, 479, 536, 514, 526, 594, 
+        616}, {460, 434, 419, 475, 508, 470, 510, 524, 487}, {419, 365, 393, 
+        387, 419, 425, 430, 376, 454, 322}, {378, 317, 231, 321, 354, 372, 
+        393, 354, 360, 293, 247}, {325, 246, 187, 178, 256, 329, 273, 302, 
+        263, 242, 193, 233}, {255, 235, 154, 150, 140, 179, 256, 209, 224, 
+        172, 174, 176, 148}, {125, 164, 102, 95, 112, 123, 165, 128, 166, 109,
+         122, 147, 100, 54}, {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 
+        60, 4, 23}}]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(b // MatrixForm\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+            {\({75}\)},
+            {\({95, 64}\)},
+            {\({17, 47, 82}\)},
+            {\({18, 35, 87, 10}\)},
+            {\({20, 4, 82, 47, 65}\)},
+            {\({19, 1, 23, 75, 3, 34}\)},
+            {\({88, 2, 77, 73, 7, 63, 67}\)},
+            {\({99, 65, 4, 28, 6, 16, 70, 92}\)},
+            {\({41, 41, 26, 56, 83, 40, 80, 70, 33}\)},
+            {\({41, 48, 72, 33, 47, 32, 37, 16, 94, 29}\)},
+            {\({53, 71, 44, 65, 25, 43, 91, 52, 97, 51, 14}\)},
+            {\({70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57}\)},
+            {\({91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48}\)},
+            {\({63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31}\)},
+            {\({4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23}\)}
+            }], "\[NoBreak]", ")"}],
+      MatrixForm[ {{75}, {95, 64}, {17, 47, 82}, {18, 35, 87, 10}, {20, 4, 82,
+         47, 65}, {19, 1, 23, 75, 3, 34}, {88, 2, 77, 73, 7, 63, 67}, {99, 65,
+         4, 28, 6, 16, 70, 92}, {41, 41, 26, 56, 83, 40, 80, 70, 33}, {41, 48,
+         72, 33, 47, 32, 37, 16, 94, 29}, {53, 71, 44, 65, 25, 43, 91, 52, 97,
+         51, 14}, {70, 11, 33, 28, 77, 73, 17, 78, 39, 68, 17, 57}, {91, 71, 
+        52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48}, {63, 66, 4, 68, 89, 53, 
+        67, 30, 73, 16, 69, 87, 40, 31}, {4, 62, 98, 27, 23, 9, 70, 98, 73, 
+        93, 38, 53, 60, 4, 23}}]]], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Macintosh",
+ScreenRectangle->{{4, 1024}, {0, 746}},
+WindowSize->{608, 724},
+WindowMargins->{{Automatic, 150}, {Automatic, 0}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 79, 1, 27, "Input"],
+Cell[1836, 54, 200, 4, 59, "Input"],
+Cell[2039, 60, 306, 6, 91, "Input"],
+Cell[2348, 68, 43, 1, 27, "Input"],
+Cell[2394, 71, 482, 9, 139, "Input"],
+
+Cell[CellGroupData[{
+Cell[2901, 84, 48, 1, 27, "Input"],
+Cell[2952, 87, 1772, 31, 261, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4761, 123, 48, 1, 27, "Input"],
+Cell[4812, 126, 1479, 26, 261, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
