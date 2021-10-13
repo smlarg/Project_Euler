@@ -3,8 +3,10 @@
 
 surprised it's so long; I would have guessed 5x problem83, not 40, but oh well
  - I don't know why it's longer than 83, but it's long in general because this can be O(n^2) because I didn't use Dijkstra
+ - no, it's 40x as long because we have to run it 80 times! I doubt using an unorder queue really matters, because the graph is
+   so sparsely connected.
 
-copied from 82, from 81
+copied from 83, from 81
 
 I did not do it in the morning in the end, but yes this was the buggiest one
 is i left-right or j? this shouldn't be hard. but it always is.
